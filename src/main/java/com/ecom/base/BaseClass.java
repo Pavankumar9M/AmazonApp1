@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
 	
-	static String projectPath = System.getProperty("user.dir");
+	public static String projectPath = System.getProperty("user.dir");
 	public static WebDriver driver;
 	
 	public static WebDriver getDriver() {
