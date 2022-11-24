@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.ecom.base.BaseClass;
 
 public class LoginPagePom extends BaseClass {
-	
+	//PAVAN
 	public LoginPagePom() {
 		PageFactory.initElements(driver, this);
 	}
@@ -20,13 +20,20 @@ public class LoginPagePom extends BaseClass {
 	WebElement password;
 	
 	@FindBy(xpath = "//input[@name='btnLogin']")
-	WebElement loginbutton; 
+	WebElement loginButton; 
 	
 	@FindBy(xpath = "//input[@name='btnReset']")
-	WebElement resetbutton;
+	WebElement resetButton;
 	
 	@FindBy(xpath = "//a[text()='here']")
 	WebElement getCredentials;
+	
+	public void loginWithValidCredentials(String userName, String passwordMap) {
+		userId.sendKeys(userName);
+		password.sendKeys(passwordMap);
+		loginButton.click();
+	}
+	
 }
  
 
